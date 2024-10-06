@@ -1,22 +1,42 @@
 import CurrencySelector from "../CurrencySelector"
 import { useState } from 'react';
 const ConverterForm = () => {
+    const [amount, setAmount] = useState(100);
     const [fromCurrency, setFromCurrency] = useState("USD");
     const [toCurrency, setToCurrency] = useState("GHS");
+    
     // swapping currencies using the icon
     const handleSwap = () => {
         setFromCurrency(toCurrency);
         setToCurrency(fromCurrency);
-
-
     }
-    const getExchangeRate = () => {
+// function to fetch exchange rates
+    const getExchangeRate = async () => {
         // API call to get exchange rate
-        const API_URL = ` https://v6.exchangerate-api.com/v6/${API_KEY}/pair/${fromCurrency}/${toCurrency}`;
+        const API_KEY = import.meta.env.VITE_API_KEY;
+        const API_URL = `http://localhost:5000/api/rates/${fromCurrency}/${toCurrency}`;
+
+   
+
+        // handling errors
+        try {
+            const response = await fetch(API_URL);
+            if(!response.ok) throw Error("Something went wrong!");
+
+            const data = await response.json();
+            const rate = (data.conversion_rate * amount).toFixed();
+            console.log(rate );
+
+        } catch (error) {
+            console.log(error);
+            
+        }
+   
+
         }
      
 
-    }
+    
     // handling form submission
     const handleFormSubmit = (e) => {
         e.preventDefault();
@@ -25,10 +45,10 @@ const ConverterForm = () => {
 
 
   return (
-    <form className="converter-form" onSubmit={handFormSubmit}>
+    <form className="converter-form" onSubmit={handleFormSubmit}>
     <div className="form-group">
       <label className="form-label">Enter an amount</label>
-      <input type="number" className="form-input" required />
+      <input type="number" className="form-input" value={amount} onChange={e => setAmount(e.target.value)} required />
     </div>
     {/* second-group */}
     <div className="form-group-A">
