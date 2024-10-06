@@ -2,3 +2,4 @@ CURRENCY-CONVERTER/exchange-rate-proxy/server.js
 CURRENCY-CONVERTER/exchange-rate-proxy/package-lock.json
 CURRENCY-CONVERTER/exchange-rate-proxy/package.json
 CURRENCY-CONVERTER/src/.env
+CURRENCY-CONVERTER/.env
