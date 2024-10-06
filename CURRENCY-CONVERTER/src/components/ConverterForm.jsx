@@ -20,6 +20,8 @@ const ConverterForm = () => {
         // API call to get exchange rate
         const API_KEY = import.meta.env.VITE_API_KEY;
         const API_URL = `https://v6.exchangerate-api.com/v6/${API_KEY}/pair/${fromCurrency}/${toCurrency}`;
+          //  log toCurrency and fromCurrency to console
+        console.log(fromCurrency, toCurrency);
 
           setIsLoading(true);
         // handling errors
@@ -29,7 +31,7 @@ const ConverterForm = () => {
 
             const data = await response.json();
             const rate = (data.conversion_rate * amount).toFixed(2);
-        setResult(`${amount} ${fromCurrency} = ${rate} ${toCurrency}`);
+            setResult(`${amount} ${fromCurrency} = ${rate} ${toCurrency}`);
 
         } catch (error) {
             console.log(error);
@@ -47,6 +49,9 @@ const ConverterForm = () => {
     const handleFormSubmit = (e) => {
         e.preventDefault();
         getExchangeRate();
+        //  log toCurrency and fromCurrency to console
+        console.log(fromCurrency, toCurrency);
+
         }
         // fetch exchange rate on initial render
         useEffect(() => getExchangeRate, []);
@@ -63,6 +68,7 @@ const ConverterForm = () => {
         <label className="form-label F">From</label>
       <CurrencySelector 
          selectedCurrency={fromCurrency}
+
         //  updating selected currency code
         handleCurrency={e =>  setFromCurrency(e.target.value) }
       />
