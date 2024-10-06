@@ -18,22 +18,20 @@ const currencyCodes = [
     "ZWL"
 ];
 const CurrencySelector = ({selectedCurrency, handleCurrency}) => {
-    // extract the county code from the selected currency code
-    const countryCode = selectedCurrency.slice(0, 2);
+  // extract the country code from the selected currency code
+  const countryCode = selectedCurrency.slice(0, 2);
+  
   return (
-    <div className="currency-select">
-        <img src= {`https://flagsapi.com/${countryCode}/flat/64.png`} alt="flag" />
-        <select
-        onChange={handleCurrency}
-         className="currency-dropdown"  value = {selectedCurrency}>
-            {currencyCodes.map((code, index) => (
-                <option key={index} value={code}>{code}</option>
-                ))}
-          
-        </select>
+      <div className="currency-select">
+          <img src={`https://flagsapi.com/${countryCode}/flat/64.png`} alt="flag" />
+          <select
+              onChange={handleCurrency}
+              className="currency-dropdown" value={selectedCurrency}>
+              {currencyCodes.map((code, index) => (
+                  <option key={index} value={code}>{code}</option>
+              ))}
+          </select>
       </div>
-      
-      
   )
 }
 

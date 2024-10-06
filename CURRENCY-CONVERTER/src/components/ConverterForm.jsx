@@ -1,9 +1,14 @@
 import CurrencySelector from "../CurrencySelector"
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
+
+
+
 const ConverterForm = () => {
     const [amount, setAmount] = useState(100);
     const [fromCurrency, setFromCurrency] = useState("USD");
     const [toCurrency, setToCurrency] = useState("GHS");
+    const [result, setResult] = useState("");
+    const [isLoading, setIsLoading] = useState(false);
     
     // swapping currencies using the icon
     const handleSwap = () => {
@@ -14,22 +19,23 @@ const ConverterForm = () => {
     const getExchangeRate = async () => {
         // API call to get exchange rate
         const API_KEY = import.meta.env.VITE_API_KEY;
-        const API_URL = `http://localhost:5000/api/rates/${fromCurrency}/${toCurrency}`;
+        const API_URL = `https://v6.exchangerate-api.com/v6/${API_KEY}/pair/${fromCurrency}/${toCurrency}`;
 
-   
-
+          setIsLoading(true);
         // handling errors
         try {
             const response = await fetch(API_URL);
             if(!response.ok) throw Error("Something went wrong!");
 
             const data = await response.json();
-            const rate = (data.conversion_rate * amount).toFixed();
-            console.log(rate );
+            const rate = (data.conversion_rate * amount).toFixed(2);
+        setResult(`${amount} ${fromCurrency} = ${rate} ${toCurrency}`);
 
         } catch (error) {
             console.log(error);
             
+        } finally {
+          setIsLoading(false);
         }
    
 
@@ -42,7 +48,8 @@ const ConverterForm = () => {
         e.preventDefault();
         getExchangeRate();
         }
-
+        // fetch exchange rate on initial render
+        useEffect(() => getExchangeRate, []);
 
   return (
     <form className="converter-form" onSubmit={handleFormSubmit}>
@@ -79,10 +86,14 @@ const ConverterForm = () => {
         />
      </div>
     </div>
-    <button className="submit-button" type="submit">Convert</button>
-    <p className="exhange-rate-results">1,000USD = 15.89GHS</p>
+    <button className={`${isLoading ? "Loading" : ""} submit-button`} type="submit">Convert</button>
+    <p className="exhange-rate-results">
+      {/* display conversion results */}
+    {isLoading ? "Getting exchange rate" : result}
+    
+    </p>
   </form>
   )
 }
 
-export default ConverterForm
+export default ConverterForm;
