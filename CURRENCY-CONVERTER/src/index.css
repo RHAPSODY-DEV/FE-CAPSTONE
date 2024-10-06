@@ -31,7 +31,7 @@ body {
   max-width: 410px;
   margin: 0 auto;
   border-radius: 20px;
-  border: solid 1px #f0f0f0;  
+  border: solid 1px rgba(255, 255, 255, 0.5) ;
   backdrop-filter: blur(35px);
 }
 .title {
@@ -48,7 +48,7 @@ body {
  label {
   font-size: 1.2rem;
   color: #fff;
-  
+  display: block;
  }
  .form-group {
   display: flex;
@@ -65,7 +65,7 @@ body {
   margin-bottom: 10px;
   color: #f0f0f0;
  }
- .converter-form .form-input {
+ .converter-form .form-input, .submit-button, .exhange-rate-results{
   padding: 5px;
   border-radius: 7px;
   width: 100%;
@@ -75,6 +75,11 @@ body {
   background: rgba(255, 255, 255, 0.1);
   border: solid 1px rgba(255, 255, 255, 0.5) ;
   outline: none;
+ }
+ .converter-form .form-input {
+  font-weight: 500;
+  padding: 10px;
+
  }
 
  .currency-select {
@@ -131,8 +136,66 @@ body {
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 33px;
  }
+ .swap-icon img { 
+  width: 20px;
+  height: 20px;
+  }
+  .swap-icon:hover {
+    background: rgba(255, 255, 255, 0.3);
+  }
 
 
- 
+.submit-button {
+
+  background: #1a73e8;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 7px;
+  color: #fff;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 20px;
+  width: 70%;
+  height: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0px 0px 10px rgba(0, 0,
+  0, 0.1);
+  margin: auto;
+  margin-top: 30px;
+
+}
+
+.submit-button:hover {
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+  }
+  
+.exhange-rate-results {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #000;
+  margin-top: 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 7px;
+  cursor: pointer;
+  font-weight: 500;
+  margin-top: 20px;
+  color: #fff;
+  text-align: center;
+  letter-spacing: 0.5px;
+}
+ .F, .T {
+  margin-bottom: 10px !important;
+
+ }
