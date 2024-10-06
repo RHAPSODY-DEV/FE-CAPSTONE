@@ -1,7 +1,7 @@
 
 const App = () => {
   return (
-    <div className="currency-conveter">
+    <div className="currency-converter">
       <h1 className="title">Currency Converter</h1>
       <form className="converter-form">
         <div className="form-group">
@@ -9,7 +9,7 @@ const App = () => {
           <input type="number" className="form-input" required />
         </div>
         {/* second-group */}
-        <div className="form-group">
+        <div className="form-group-A">
          <div className="form-section">
             <label className="form-label">From</label>
           <div className="currency-select">
@@ -28,9 +28,9 @@ const App = () => {
     <svg width="16" viewBox="0 0 20 19" xmlns="http://www.w3.org/2000/svg">
     <path
         d="M19.13 11.66H.22a.22.22 0 0 0-.22.22v1.62a.22.22 0 0 0 .22.22h16.45l-3.92 4.94a.22.22 0 0 0 .17.35h1.97c.13 0 .25-.06.33-.16l4.59-5.78a.9.9 0 0 0-.7-1.43zM19.78 5.29H3.34L7.26.35A.22.22 0 0 0 7.09 0H5.12a.22.22 0 0 0-.34.16L.19 5.94a.9.9 0 0 0 .68 1.4H19.78a.22.22 0 0 0 .22-.22V5.51a.22.22 0 0 0-.22-.22z"
-        fill="#000"
+        fill="#fff"
     />
-</svg>
+  </svg>
     </div>
          <div className="form-section">
             <label className="form-label">To</label>
@@ -45,9 +45,9 @@ const App = () => {
             </select>
           </div>
          </div>
-         <button className="submit-button" type="submit">Convert</button>
-         <p className="exhange-rate-results">1,000USD = 15.89GHS</p>
         </div>
+        <button className="submit-button" type="submit">Convert</button>
+        <p className="exhange-rate-results">1,000USD = 15.89GHS</p>
       </form>
 
     </div>
