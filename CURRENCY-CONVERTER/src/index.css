@@ -27,9 +27,9 @@ body {
 }
 .currency-converter {
   /* background-color: #f0f0f0; */
-  background: rgba(2, 7, 40, 0.3);
+  background: rgba(2, 7, 40, 0.4);
   padding: 40px 30px 50px;
-  max-width: 410px;
+  max-width: 800px;
   margin: 0 auto;
   border-radius: 20px;
   border: solid 1px rgba(255, 255, 255, 0.5) ;
@@ -58,7 +58,7 @@ body {
  .form-group-A {
   display: flex;
     /* flex-direction: column; */
-    justify-content: space-between;
+    justify-content: space-around;
     margin-top: 40px;
   
  }
@@ -159,7 +159,7 @@ body {
   cursor: pointer;
   font-weight: 500;
   margin-top: 20px;
-  width: 70%;
+  width: 35%;
   height: 50px;
   display: flex;
   justify-content: center;
@@ -202,4 +202,62 @@ body {
 
  }
  /* improvements on the UI */
- 
+ .display-info {
+  width: 100%;
+  height: 300px;
+  margin-top: 30px;
+  /* border-radius: 10px; */
+  background: rgba(255, 255, 255, 0.2);
+ }
+ .info {
+  padding: 10px;
+  color: #f0f0f0;
+  margin: 0 0 0 20px;
+ }
+ .currency-info-box {
+  display: flex;
+  justify-content: space-evenly;
+ }
+ .currency-from, .currency-to {
+  background: rgba(255, 255, 255, 0.5);
+  width: 40%;
+  height: 210px;
+  padding: 10px;
+  border-end-end-radius: 8px;
+ }
+ .flag {
+  display: flex;
+  align-items: center;
+  font-size: 1em;
+  gap: 10px;
+ }
+ .information {
+  padding: 15px;
+  color: #030728;
+ }
+ .em {
+  margin-top: 20px;
+ }
+ .information a > button {
+    padding: 9px;
+    font-size: 1em;
+    border: none;
+    outline: none;
+    margin-top: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+ }
+ .information a > button:hover {
+  background: rgba(255, 255, 255, 0.4);
+  transition: all 0.2s ease;
+
+ }
+ .information p {
+  font-size: 0.8em;
+ }
+ .flag img {
+  width: 30px;
+  height: 30px;
+
+ }
