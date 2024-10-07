@@ -181,7 +181,7 @@ body {
   transition: all 0.3s ease;
   }
   
-.exhange-rate-results {
+  .exchange-rate-results {
   font-size: 1.5rem;
   font-weight: 500;
   color: #000;
@@ -202,4 +202,3 @@ body {
 
  }
  /* improvements on the UI */
- 
