@@ -8,7 +8,7 @@ const App = () => {
 
     {/* DISPLAYING INFO ABOUT SELECTED CURRENCIES */}
     <div className="display-info">
-      <h2 className="info">Currency Information</h2>
+      <h1 className="info">Currency Information</h1>
       <hr />
       <div className="em"></div>
     <div className="currency-info-box">

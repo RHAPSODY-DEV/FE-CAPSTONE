@@ -81,7 +81,7 @@ body {
  .converter-form .form-input {
   font-weight: 500;
   padding: 10px;
-
+  font-size: 1.5em;
  }
 
  .currency-select {
@@ -182,9 +182,8 @@ body {
   transition: all 0.3s ease;
   }
   
-  .exchange-rate-results {
+  .exhange-rate-results {
   font-size: 1.5rem;
-  font-weight: 500;
   color: #000;
   margin-top: 20px;
   background: rgba(255, 255, 255, 0.2);
@@ -195,7 +194,8 @@ body {
   font-weight: 500;
   margin-top: 20px;
   color: #fff;
-  text-align: center;
+  text-align: center !important;
+  font-size: 1.5em !important;
   letter-spacing: 0.5px;
 }
  .F, .T {
