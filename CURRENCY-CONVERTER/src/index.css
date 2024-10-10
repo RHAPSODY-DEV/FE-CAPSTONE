@@ -1,92 +1,108 @@
-/* @import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap'); */
 @import url('https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
-*{
+
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Montserrat', sans-serif;
-
 }
+
 body {
-  background-color: #f0f0f0;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
- background-color: #16098A;
- background-color: #030728;
- /* background-image: url(..//bg.png); */
- background-image: url(../vb.jpg);
- background-size: cover;
- /* background-position: center; */
- background-attachment: fixed;
- background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  transition: background-image 0.7s ease, background-color 0.7s ease;
 }
+
+/* Light Mode Styles */
+body.light-mode {
+  background-image: url('../white.jpg'); /* Replace with your light background image path */
+  /* background-color: #f0f0f0; */
+  color: #000;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+  background-image: url('../path-to-dark-image.jpg'); /* Replace with your dark background image path */
+  background-color: #030728;
+  color: #fff;
+}
+
 #root {
   width: 100%;
 }
+
 .currency-converter {
-  /* background-color: #f0f0f0; */
   background: rgba(2, 7, 40, 0.4);
   padding: 40px 30px 50px;
   max-width: 800px;
   margin: 0 auto;
   border-radius: 20px;
-  border: solid 1px rgba(255, 255, 255, 0.5) ;
-  backdrop-filter: blur(-200px);
+  border: solid 1px rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(1px); /* Corrected blur value */
   margin-top: 50px;
 }
+
 .title {
   font-size: 1.6rem;
   font-weight: 700;
   color: #fff;
   text-align: center;
-
-
 }
+
 .converter-form {
   margin-top: 35px;
 }
- label {
+
+label {
   font-size: 1.2rem;
   color: #fff;
   display: block;
- }
- .form-group {
+}
+
+.form-group {
   display: flex;
   flex-direction: column;
- }
- .form-group-A {
+}
+
+.form-group-A {
   display: flex;
-    /* flex-direction: column; */
-    justify-content: space-around;
-    margin-top: 40px;
-  
- }
- .converter-form .form-group label {
+  justify-content: space-around;
+  margin-top: 40px;
+}
+
+.converter-form .form-group label {
   margin-bottom: 10px;
   color: #f0f0f0;
- }
- .converter-form .form-input, .submit-button, .exhange-rate-results{
+}
+
+.converter-form .form-input,
+.submit-button,
+.exhange-rate-results {
   padding: 5px;
   border-radius: 7px;
   width: 100%;
   color: #fff;
-  font-size: 1srem;
+  font-size: 1rem;
   min-height: 40px;
   background: rgba(255, 255, 255, 0.1);
-  border: solid 1px rgba(255, 255, 255, 0.5) ;
+  border: solid 1px rgba(255, 255, 255, 0.5);
   outline: none;
- }
- .converter-form .form-input {
+}
+
+.converter-form .form-input {
   font-weight: 500;
   padding: 10px;
   font-size: 1.5em;
- }
+}
 
- .currency-select {
+.currency-select {
   background: rgba(255, 255, 255, 0.1);
-  border: solid 1px rgba(255, 255, 255, 0.5) ;
+  border: solid 1px rgba(255, 255, 255, 0.5);
   outline: none;
   padding: 7px;
   border-radius: 7px;
@@ -96,13 +112,15 @@ body {
   min-height: 47px;
   display: flex;
   align-items: center;
- }
- .currency-select img {
+}
+
+.currency-select img {
   width: 20px;
   height: 20px;
   margin-right: 7px;
- }
- .currency-select .currency-dropdown {
+}
+
+.currency-select .currency-dropdown {
   display: flex;
   flex-direction: column;
   padding: 7px;
@@ -114,43 +132,43 @@ body {
   font-weight: 500;
   font-size: 1rem;
   cursor: pointer;
-  }
-  .currency-select .currency-dropdown option {
-    background-color: #f0f0f0;
-    color: #000;
-    padding: 10px;
-    border-radius: 7px;
-    font-size: 1rem;
-    cursor: pointer;
+}
 
-  }
- .swap-icon {
+.currency-select .currency-dropdown option {
+  background-color: #f0f0f0;
+  color: #000;
+  padding: 10px;
+  border-radius: 7px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.swap-icon {
   background: rgba(255, 255, 255, 0.1);
-  border: solid 1px rgba(255, 255, 255, 0.5) ;
+  border: solid 1px rgba(255, 255, 255, 0.5);
   outline: none;
   padding: 7px;
   border-radius: 100%;
   height: 50px;
   width: 50px;
   color: #fff;
-  min-height: 47px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   margin-top: 33px;
- }
- .swap-icon img { 
+}
+
+.swap-icon img {
   width: 20px;
   height: 20px;
-  }
-  .swap-icon:hover {
-    background: rgba(255, 255, 255, 0.3);
-  }
+}
 
+.swap-icon:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
 
 .submit-button {
-
   background: #1a73e8;
   border: none;
   padding: 10px 20px;
@@ -168,11 +186,9 @@ body {
   transition: all 0.3s ease;
   position: relative;
   z-index: 1;
-  box-shadow: 0px 0px 10px rgba(0, 0,
-  0, 0.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   margin: auto;
   margin-top: 30px;
-
 }
 
 .submit-button:hover {
@@ -180,9 +196,9 @@ body {
   box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
   color: #030728;
   transition: all 0.3s ease;
-  }
-  
-  .exhange-rate-results {
+}
+
+.exhange-rate-results {
   font-size: 1.5rem;
   color: #000;
   margin-top: 20px;
@@ -192,73 +208,119 @@ body {
   border-radius: 7px;
   cursor: pointer;
   font-weight: 500;
-  margin-top: 20px;
   color: #fff;
   text-align: center !important;
   font-size: 1.5em !important;
   letter-spacing: 0.5px;
 }
- .F, .T {
-  margin-bottom: 10px !important;
 
- }
- /* improvements on the UI */
- .display-info {
+.F,
+.T {
+  margin-bottom: 10px !important;
+}
+
+/* Improvements on the UI */
+.display-info {
   width: 100%;
   height: 300px;
   margin-top: 30px;
-  /* border-radius: 10px; */
   background: rgba(255, 255, 255, 0.2);
- }
- .info {
+}
+
+.info {
   padding: 10px;
   color: #f0f0f0;
   margin: 0 0 0 20px;
- }
- .currency-info-box {
+}
+
+.currency-info-box {
   display: flex;
   justify-content: space-evenly;
- }
- .currency-from, .currency-to {
+}
+
+.currency-from,
+.currency-to {
   background: rgba(255, 255, 255, 0.5);
   width: 40%;
   height: 210px;
   padding: 10px;
-  border-end-end-radius: 8px;
- }
- .flag {
+  border-radius: 8px;
+}
+
+.flag {
   display: flex;
   align-items: center;
   font-size: 1em;
   gap: 10px;
- }
- .information {
+}
+
+.information {
   padding: 15px;
   color: #030728;
- }
- .em {
+}
+
+.em {
   margin-top: 20px;
- }
- .information a > button {
-    padding: 9px;
-    font-size: 1em;
-    border: none;
-    outline: none;
-    margin-top: 10px;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: all 0.2s ease;
- }
- .information a > button:hover {
+}
+
+.information a > button {
+  padding: 9px;
+  font-size: 1em;
+  border: none;
+  outline: none;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.information a > button:hover {
   background: rgba(255, 255, 255, 0.4);
   transition: all 0.2s ease;
+}
 
- }
- .information p {
+.information p {
   font-size: 0.8em;
- }
- .flag img {
+}
+
+.flag img {
   width: 30px;
   height: 30px;
+}
 
- }
+/* Dark Mode Background Images */
+body.light-mode {
+  background-image: url('../vb.jpg'); /* Replace with your light background image path */
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #f0f0f0;
+  color: #000;
+}
+
+body.dark-mode {
+  background-image: url('../bg.png'); /* Replace with your dark background image path */
+  background-color: #030728;
+  color: #fff;
+}
+
+/* Toggle Button Styling */
+.toggle-mode-button {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: #1a73e8;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.6s ease;
+  z-index: 1000;
+}
+
+.toggle-mode-button:hover {
+  background: #1558b0;
+}
+
+/* MEDIA QUERIES */
+/* Add any responsive styles here */
