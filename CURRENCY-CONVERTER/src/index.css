@@ -337,6 +337,13 @@ body.dark-mode {
   body.dark-mode {
     background-position: center center;
   }
+  .info {
+    padding: 10px;
+    font-size: 1.2em;
+  }
+  .converter-form .form-group label, label {
+    text-align: center;
+  }
   .display-info {
     padding: 10px 15px;
     height: 530px;
