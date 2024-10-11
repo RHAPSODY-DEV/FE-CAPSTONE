@@ -343,8 +343,9 @@ body.dark-mode {
   }
   .swap-icon {
     /* margin: 0 0 10px 170px; */
-    margin-left: 170px;
-    margin-bottom: 10px;
+    margin-left: 180px;
+    transform: rotate(270deg);
+    margin-bottom: 20px;
   }
 
   .converter-form .form-group label, label {
@@ -398,7 +399,7 @@ body.dark-mode {
 /* Small Mobile View */
 @media (max-width: 480px) {
   #root {
-    width: 80%;
+    width: 90%;
   }
   .converter-form {
     padding: 10px;
@@ -415,6 +416,7 @@ body.dark-mode {
   .swap-icon {
     margin-left: 120px;
     transform: rotate(270deg);
+    margin-bottom: 20px;
   }
 
   .title {
@@ -434,6 +436,23 @@ body.dark-mode {
   .exhange-rate-results {
     font-size: 1.2rem;
     padding: 10px;
+  }
+  .title {
+    margin-top: 20px;
+    font-size: 1.4em;
+  }
+  .toggle-mode-button {
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    width: 80px;
+    align-items: center;
+    display: flex;
+    top: -1px;
+    right: 1px;
+    border-top-right-radius: inherit;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
   }
   
 }

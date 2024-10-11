@@ -25,7 +25,7 @@ const App = () => {
     <div className="currency-converter">
       {/* Dark Mode Toggle Button */}
       <button className="toggle-mode-button" onClick={toggleDarkMode}>
-        {isDarkMode ? "Switch to Light Mode" : "Switch to Dark Mode"}
+        {isDarkMode ? "Light" : "Dark"}
       </button>
 
       <h1 className="title">Currency Converter</h1>
