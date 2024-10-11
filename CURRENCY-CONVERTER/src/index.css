@@ -414,6 +414,7 @@ body.dark-mode {
   }
   .swap-icon {
     margin-left: 120px;
+    transform: rotate(270deg);
   }
 
   .title {
@@ -434,7 +435,5 @@ body.dark-mode {
     font-size: 1.2rem;
     padding: 10px;
   }
-  .toggle-mode-button {
-
-  }
+  
 }
