@@ -61,7 +61,7 @@ const App = () => {
           <div className="currency-to">
             <div className="information">
               <div className="flag">
-                <img src={`https://flagsapi.com/US/flat/64.png`} alt="flag" />
+                <img src={`https://flagsapi.com/GH/flat/64.png`} alt="flag" />
                 <p>USD - US Dollar</p>
               </div>
               <div className="text">

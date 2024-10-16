@@ -169,7 +169,7 @@ label {
 }
 
 .submit-button {
-  background: #1a73e8;
+  background: #a4b0c0;
   border: none;
   padding: 10px 20px;
   border-radius: 7px;
@@ -411,7 +411,7 @@ body.dark-mode {
     padding: 15px 10px;
     max-width: 90%;
     max-width: 1200px;
-    height: 1180px;
+    height: 1240px;
   }
   .swap-icon {
     margin-left: 120px;
@@ -454,5 +454,44 @@ body.dark-mode {
     border-top-left-radius: 0;
     border-bottom-right-radius: 0;
   }
-  
+   
+}
+/* CONVERSION HISTORY UI */
+.conversion-history {
+  margin-top: 20px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+}
+
+.conversion-history h3 {
+  display: flex;
+  justify-content: space-between; /* Aligns button on the right */
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.toggle-history-button {
+  background: #1a73e8;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.toggle-history-button:hover {
+  background: #1558b0; /* Darker shade on hover */
+}
+
+.conversion-history ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.conversion-history li {
+  padding: 5px 0;
+  color: #fff; /* Adjust as necessary for visibility */
 }
