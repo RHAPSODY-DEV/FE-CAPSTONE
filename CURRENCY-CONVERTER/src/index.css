@@ -73,6 +73,7 @@ label {
   display: flex;
   justify-content: space-around;
   margin-top: 40px;
+  gap: 15px;
 }
 
 .converter-form .form-group label {
@@ -102,7 +103,7 @@ label {
 
 .currency-select {
   background: rgba(255, 255, 255, 0.1);
-  border: solid 1px rgba(255, 255, 255, 0.5);
+  /* border: solid 1px rgba(255, 255, 255, 0.5); */
   outline: none;
   padding: 7px;
   border-radius: 7px;
@@ -525,4 +526,18 @@ body.dark-mode {
 .conversion-history {
   max-height: 400px;
   overflow-y: auto; /* Allows scrolling if the history becomes long */
+}
+.currency-search-input {
+  width: 90%;
+  padding: 10px;
+  border-radius: 7px;
+  background: rgba(255, 255, 255, 0.1);
+  border: solid 1px rgba(255, 255, 255, 0.5);
+  color: #fff;
+  font-size: 1.2rem;
+
+}
+
+.css-1awthjh-control {
+  border: none;
 }
