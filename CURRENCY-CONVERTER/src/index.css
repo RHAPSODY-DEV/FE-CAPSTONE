@@ -495,3 +495,34 @@ body.dark-mode {
   padding: 5px 0;
   color: #fff; /* Adjust as necessary for visibility */
 }
+/* Add min-height and auto for dynamic resizing */
+.currency-converter {
+  height: auto;
+  min-height: 100px; /* Ensures a base height */
+  overflow: hidden; /* Keeps content within bounds */
+}
+
+.converter-form {
+  height: auto;
+  min-height: 100px; /* Ensures the form adapts */
+  overflow: visible; /* Prevents cutting off content */
+}
+
+/* Ensure inner elements grow as necessary */
+.form-group,
+.form-group-A {
+  flex-grow: 1; /* Allows groups to expand with content */
+}
+
+.exhange-rate-results {
+  height: auto;
+  min-height: 50px;
+  margin-top: 20px;
+  overflow-wrap: break-word;
+}
+
+/* Responsive height for conversion history */
+.conversion-history {
+  max-height: 400px;
+  overflow-y: auto; /* Allows scrolling if the history becomes long */
+}
